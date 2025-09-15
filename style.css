@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth
+}
+/*----------------------------------------------------- Navbar------------------------- */
+.navbar{
+  position: fixed;
+  z-index: 998;
+  width: 100%;
+  padding: 0 1rem;
+  opacity: .9;
+}
+.nav-item .nav-link{
+transition: 0.5s ease;
+}
+.nav-item .nav-link:hover{
+    background-color: #ffa500;
+}
+/*----------------------------------------------------- Carousel------------------------- */
+.lightBoxContainer {
+  background: rgba(0,0,0,0.7); 
+  z-index: 988;
+}
+.lightBoxItem {
+  background: transparent;
+  animation: popup 0.3s ease-in-out;
+}
+.lightBoxItem .card {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6); 
+  border-radius: 15px;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+  border: none;
+}
+.lightBoxItem .card:hover {
+  transform: scale(1.03);
+}
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.closeing {
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.6);
+  transition: transform 0.2s ease, color 0.2s ease;
+  z-index: 100000;
+}
+.closeing:hover {
+  color: #ffc107;
+  transform: scale(1.2);
+}
+@media (max-width:850px){
+    .carousel{
+        background-position: 50%;
+    }
+}
+@media (max-width:450px){
+    .carousel .content h5{
+        font-size: 1.5rem;
+    }
+    .carousel .content h1{
+        font-size: 2.4rem;
+    }
+    .carousel .content p{
+        font-size: .8rem;
+    }
+} 
+/* ----------------------------- Book -----------------------------------*/
+.line {
+    width:2.5rem;   
+    height: .3rem;
+    transition: .4s ease;
+}
+.line:hover{
+    width: 5rem;
+    height: .3rem;
+}
+@media (max-width:765px){
+    .book{
+        padding: 0;
+    }
+    .main-text h1{
+        padding: 20px;
+    }
+}
+ @media (max-width: 996px) {
+  .roundedd{
+    width: 100% !important;
+    height: 100% !important;  
+  }
+} 
+/* ----------------------------- selling ----------------------------------- */
+ .checked{
+    color: #ffa500;
+}
+.BOB:hover{
+    color: white !important;
+}
+.card img:hover{
+        cursor: pointer;
+
+}
+.card-body h3{
+    transition: .5s;
+}
+.card-body h3:hover{
+    color: #ffa500;
+}
+ @media (max-width: 996px) {
+ .BOB{
+    width: 100% !important;
+    height: 100% !important;  
+  }
+} 
+/*-----------------------------------------------------gallary-------------------*/
+.gallary .card{
+    border: none;
+}
+.gallary .card img {
+  height: 15rem; 
+  object-fit: cover;
+  animation: anime 3s linear infinite;
+}
+@keyframes anime {
+  0%   { transform: rotate(-2deg); }
+  50%  { transform: rotate(2deg); }
+  100% { transform: rotate(-2deg); }
+}
+/*--------------------------- About Start------------------------------------------ */
+@media (max-width:765px){
+    .about{
+        padding: 0;
+    }
+}
+/* ------------------------------------------footer---------------------------------- */
+ .social-links i{
+    transition: 0.5s ease;
+    cursor: pointer; 
+ }
+.fa-brands:hover{
+    background-color: #ffa500 !important;
+}
